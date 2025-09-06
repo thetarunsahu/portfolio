@@ -1,0 +1,146 @@
+<!--
+Simple single-file portfolio website
+Customize the text, links and images (replace placeholder images with your own).
+Save this as index.html and push to a GitHub repo named `portfolio` then enable GitHub Pages (main branch -> / (root)).
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarun Sahu — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Tarun Sahu — projects, skills and contact." />
+  <style>
+    :root{--accent:#0ea5a1;--bg:#0f172a;--card:#0b1220;--muted:#94a3b8}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;background:linear-gradient(180deg,#021024 0%,#071424 100%);color:#e6eef6}
+    .container{max-width:980px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021024}
+    h1{font-size:20px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{color:#cfeefe;text-decoration:none;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
+    .card{background:rgba(255,255,255,0.02);padding:16px;border-radius:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px}
+    .projects{display:grid;gap:12px}
+    .proj{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))}
+    .proj h3{margin:0;font-size:16px}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+    .actions{display:flex;gap:8px}
+    .btn{padding:8px 10px;border-radius:8px;text-decoration:none;background:var(--accent);color:#021024;font-weight:600}
+    footer{margin-top:20px;color:var(--muted);font-size:14px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:64px;height:64px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">TS</div>
+      <div>
+        <h1>Tarun Sahu</h1>
+        <p class="lead">Student • Web Developer (learning) • AI enthusiast — share my projects & contact</p>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section id="about" class="card">
+          <h2>About</h2>
+          <p class="lead">I'm a B.Tech CSE student at MIT-ADT Pune. I enjoy building small web projects, learning backend basics and exploring AI. This page hosts my work and links to code.</p>
+          <div style="margin-top:12px">
+            <strong>Skills</strong>
+            <div class="skills" style="margin-top:8px">
+              <span class="chip">Java</span>
+              <span class="chip">C</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Git & GitHub</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="card" style="margin-top:14px">
+          <h2>Projects</h2>
+          <div class="projects" style="margin-top:12px">
+            <!-- Replace these cards with your real projects. -->
+            <article class="proj">
+              <h3>Personal Portfolio Website</h3>
+              <p>Simple responsive portfolio built with HTML/CSS/JS and deployed on GitHub Pages.</p>
+              <div class="actions">
+                <a class="btn" href="https://github.com/thetarunsahu/portfolio" target="_blank">View Code</a>
+                <a class="btn" href="#" onclick="alert('Live demo link not set yet')">Live Demo</a>
+              </div>
+            </article>
+
+            <article class="proj">
+              <h3>Obstacle Avoidance Robot (Arduino)</h3>
+              <p>Sensor-based robot built during school with ultrasonic sensors and Arduino UNO.</p>
+              <div class="actions">
+                <a class="btn" href="#" onclick="alert('GitHub repo not added yet')">View Code</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:14px">
+          <h2>Contact</h2>
+          <p class="lead">Want to collaborate or see my work? Reach out:</p>
+          <p>Email: <a href="mailto:your.email@example.com" style="color:var(--accent)">your.email@example.com</a></p>
+          <p>GitHub: <a href="https://github.com/thetarunsahu" target="_blank" style="color:var(--accent)">github.com/thetarunsahu</a></p>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Quick Links</h3>
+          <ul style="color:var(--muted);padding-left:18px">
+            <li><a href="#projects">Projects (live)</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Resume</h3>
+          <p style="color:var(--muted)">Download a one-page resume (replace with your file).</p>
+          <a class="btn" href="#" onclick="alert('Attach resume file to repo and update this link')">Download</a>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Notes</h3>
+          <p style="color:var(--muted);font-size:14px">Edit the HTML to update projects, replace placeholders with your GitHub links and email.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>Made with ❤️ by Tarun • <span style="color:var(--muted)">Updated: Sept 2025</span></div>
+        <div style="color:var(--muted)">Hosted on GitHub Pages</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Quick customization helper (no build tools needed)
+    // Replace placeholders using simple JS or edit HTML directly.
+    // Example: change initials in avatar from TS to your initials
+    (function(){
+      try{
+        const avatar=document.querySelector('.avatar');
+        // avatar.textContent = 'YZ' // set your initials if needed
+      }catch(e){console.warn(e)}
+    })();
+  </script>
+</body>
+</html>
